@@ -6,3 +6,32 @@ padding: 0px;
 display: block;
 margin: auto;
 }
+li {
+        float: left;
+    }
+    
+li a {
+        display: block;
+        color: #fcf9ed;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+}
+    
+li a:hover {
+        background-color: #fcf9ed;
+        color: #397f3e;
+}
+ul{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #397f3e;
+
+}
+
+
+
+
