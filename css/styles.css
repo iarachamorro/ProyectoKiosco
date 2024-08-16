@@ -1,18 +1,23 @@
-.carru{
-max-width: 20%;
-height: auto;
-margin: 0px;
-padding: 0px;
-display: block;
-margin: auto;
+/* body */
+body {
+    margin: auto;
+    height: 100%;
 }
+
 *{
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        list-style: none;
-        box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
+/* carrusel */
+.carru{
+    max-width: 20%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    margin: auto;
+    }
+/* nav */
 nav{
         background: #397f3e;
         height: 80px;
@@ -80,4 +85,10 @@ li a.active, li a:hover{
         right: 7px;
         margin-top: 18px;
         padding: 2px 12px;
+}
+
+.logo{
+    width: 1%;
+    height: auto;
+    margin-left: 6%;
 }

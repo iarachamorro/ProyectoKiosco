@@ -1,3 +1,4 @@
+// carrusel
 window.addEventListener("load",function(){
     console.log("El script se cargó correctamente");
      var imagenes = [];
