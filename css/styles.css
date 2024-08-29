@@ -18,6 +18,7 @@ header{
         width: 100%;
         height: 70px;
         display: flex;
+        justify-content: space-around;
         align-items: center;
         position: fixed;
         background: #397f3e;
@@ -28,7 +29,7 @@ i{
         cursor: pointer;
 }
 .filtro{
-        font-size: 30px;
+        font-size: 50px;
         color: #fcf9ed;
         margin-left: 1%;
         margin-top: 2%;
@@ -67,12 +68,14 @@ i{
 }
 header ul{
         display: flex;
-        flex: 2;
+
        
 
 }
 header ul li{
         list-style: none;
+        position: absolute;
+        
 }
 header ul li a{
         text-decoration: none;
@@ -88,9 +91,19 @@ li a.active, li a:hover{
 
 
 }
+/*
+.barra{
+        display:flex;
+        justify-content: space-around;
+}
 
-
-
+/*
+ para usar flexbox
+{
+        display:flex;
+        justify-content: space-around;
+}
+*/
 
 
 

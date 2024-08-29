@@ -7,13 +7,41 @@
 .header{
     background: #397f3e;
     display: flex; 
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     height: 85px;
-    padding: 5px 5%;  
+}
+i{
+    cursor: pointer;
+    color: #fcf9ed;
+    
+
 }
 .filtro{
-    margin-right: 1000%;
+    font-size: 35px;
+    align-items: center;
+    color: #fcf9ed;
+    padding: 10px;
+
+}
+input{
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background:#fcf9ed;
+    text-align: center;
+    font-size:larger;
+    width: 400px; 
+    height: 35px;  
+}
+.boton{
+    background-color: #306b34;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    border: none;
+
 }
 
 /*
@@ -69,7 +97,10 @@
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    
+   
 }
+
 .header .btn button:hover{
     background: #fcf9ed;
     color: #306b34;
