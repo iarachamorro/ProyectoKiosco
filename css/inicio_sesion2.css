@@ -38,7 +38,7 @@ label{
 input{
 	width: 60%;
 	height: 10px;
-	background: #e0dede ;
+	background: #fcf9ed ;
 	justify-content: center;
 	display: flex;
 	margin: 20px auto;
@@ -46,6 +46,9 @@ input{
 	border: none;
 	outline: none;
 	border-radius: 5px;
+}
+.barraf{
+	background: #dbdad1;
 }
 button{
 	width: 60%;
@@ -58,11 +61,20 @@ button{
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 30px;
-	outline: none;
-	border: none;
+	outline:none;
+	border:none;
 	border-radius: 5px;
 	transition: .2s ease-in;
 	cursor: pointer;
+	
+}
+.boton{
+	color: #397f3e;
+	background: #dbdad1;
+}
+.boton:hover{
+	background: #397f3e;
+	color: #fcf9ed;
 }
 button:hover{
 	background: #397f3e;
