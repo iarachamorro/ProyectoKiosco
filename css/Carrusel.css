@@ -3,7 +3,7 @@
   .product {
     position: relative;
     overflow: hidden;
-    padding: 20px;
+    padding: 100px;
   }
   
   .product-category {
@@ -13,14 +13,13 @@
     margin-bottom: 40px;
     text-transform: capitalize;
   }
-  
+
   .product-container {
     padding: 0 10vw;
     display: flex;
-    overflow-x: auto;
     scroll-behavior: smooth;
   }
-  
+  */
   .product-container::-webkit-scrollbar {
     display: none;
   }
@@ -112,7 +111,7 @@
     opacity: 0.5;
     text-decoration: line-through;
   }
-  
+  /*
   .pre-btn,
   .nxt-btn {
     border: none;
@@ -132,7 +131,7 @@
     left: 0;
     transform: rotate(180deg);
   }
-  
+  */  
   .nxt-btn {
     right: 0;
   }
