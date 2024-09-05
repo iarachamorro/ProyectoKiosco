@@ -70,6 +70,7 @@ input{
     transform: scale(1.1);
 }
 
+/*
 .link a{
     text-decoration: none;
     color: #397f3e;
@@ -89,4 +90,14 @@ input{
     margin-top: 150px;
     display: block;
     align-self: flex-end;
+}
+*/
+
+/*se despliega menu al pasar el mouse*/
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+.dropdown.toggle ::after{
+    display: none;
 }
