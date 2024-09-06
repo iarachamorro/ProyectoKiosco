@@ -1,94 +1,93 @@
-/* body */
-body {
-    margin: auto;
-    height: 100%;
-}
-
 *{
-  padding: 0px;
-  margin: 0px;
-}
-/* carrusel */
-.carru{
-    max-width: 20%;
-    height: auto;
-    margin: 0px;
-    padding: 0px;
-    display: block;
-    margin: auto;
-    }
-/* nav */
-nav{
-        background: #397f3e;
-        height: 80px;
-        width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
 }
 
-nav ul{
-        float: right;
-        margin-right: 30px;
+.header{
+    background: #397f3e;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+}
+
+i{
+    cursor: pointer;
+    color: #397f3e;
+    
 
 }
-nav ul li{
-        display: inline-block;
-        line-height: 80px;
-        margin: 0 5px;
 
-
-}
-nav ul li a{
-        color: #fcf9ed;
-        font-size: 17px;
-        padding: 5px 10px;
-        border-radius: 3px;
-        
-        text-decoration: none;
-
-}
-li a.active, li a:hover{
-        background: #fcf9ed;
-        transition: .5s;
-        color: #397f3e;
-
-
-}
-.barra{
-        
-        margin-top: 27px;
-        margin-left: 400px;
-        line-height: 20px;
-        width: 300px;
-        height: 27px;
-        border: #fcf9ed;
-        border-radius: 15px;
-        
-
-
-
-}
 .filtro{
-        font-size: 30px;
-        color: #fcf9ed;
-        line-height: 20px;
-        float: left;
-        margin-top: 18px;
-        padding: 7px 16px;
-
-
-
+    font-size: 35px;
+    align-items: center;
+    color: #fcf9ed;
+    padding: 10px;
+    transition: all 0.3s ease 0s;
 
 }
-.lupa{
-        font-size: 20px;
-        color: #fcf9ed;
-        line-height: 20px;
-        right: 7px;
-        margin-top: 18px;
-        padding: 2px 12px;
+.filtro:hover{
+    transform: scale(1.1);
+}
+input{
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background:#fcf9ed;
+    text-align: center;
+    font-size:larger;
+    width: 400px; 
+    height: 35px;  
+}
+.boton{
+    background-color: #fcf9ed;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.3s ease 0s;
+
+}
+.boton:hover{
+   
+    transform: scale(1.1);
+
+}
+.header .btn button{
+    font-weight: 700;
+    margin-left: 20px;
+    color: #397f3e;
+    padding: 9px 25px;
+    background: #fcf9ed;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    
+   
 }
 
-.logo{
-    width: 1%;
-    height: auto;
-    margin-left: 6%;
+.header .btn button:hover{
+    background: #fcf9ed;
+    color: #306b34;
+    transform: scale(1.1);
+}
+
+
+
+
+/*se despliega menu al pasar el mouse*/
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    background:#fcf9ed;
+    
+    
+}
+/*
+.dropdown.toggle ::after{
+    display: none;
 }
