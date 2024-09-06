@@ -30,6 +30,19 @@ i{
 }
 .filtro:hover{
     transform: scale(1.1);
+
+
+}
+.carrito {
+    font-size: 20px;
+    align-items: center;
+    color: #397f3e;
+    padding: 10px;
+
+
+}
+.filtro:hover{
+    color: #fcf9ed;
 }
 input{
     border-radius: 30px;
@@ -67,7 +80,6 @@ input{
     cursor: pointer;
     transition: all 0.3s ease 0s;
     
-   
 }
 
 .header .btn button:hover{
