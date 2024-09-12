@@ -23,3 +23,4 @@ window.addEventListener("load",function(){
      }
      this.setInterval(cambiarImagenes, tiempo)
 });
+
