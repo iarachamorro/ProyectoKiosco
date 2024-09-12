@@ -6,8 +6,8 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #397f3e;
+    color: #fcf9ed;
     padding: 10px;
     text-align: center;
 }
@@ -40,8 +40,9 @@ main {
 }
 
 .product button {
-    background-color: #28a745;
-    color: white;
+    font-weight: 600;
+    background-color: #397f3e;
+    color: #fcf9ed;
     border: none;
     padding: 10px;
     cursor: pointer;

@@ -62,7 +62,8 @@ input{
     border-radius: 30px;
     border: none;
     transition: all 0.3s ease 0s;
-
+    padding: 2px;
+    
 }
 .boton:hover{
    
