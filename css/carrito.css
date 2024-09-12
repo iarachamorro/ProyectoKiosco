@@ -61,3 +61,23 @@ main {
     border-bottom: 1px solid #ddd;
     padding: 5px 0;
 }
+
+.btn button{
+    font-weight: 700;
+    margin-left: 20px;
+    color: #397f3e;
+    padding: 9px 25px;
+    background: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    
+   
+}
+
+.btn button:hover{
+    background: #fcf9ed;
+    color: #306b34;
+    transform: scale(1.1);
+}
