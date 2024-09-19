@@ -62,3 +62,26 @@ main {
     border-bottom: 1px solid #ddd;
     padding: 5px 0;
 }
+.boton{
+    font-weight: 700;
+    margin-left: 20px;
+    color: #397f3e;
+    padding: 9px 25px;
+    background: #fcf9ed;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}.boton:hover{
+    background: #fcf9ed;
+    color: #306b34;
+}
+i{
+    cursor: pointer;
+    color: #397f3e;
+    transition: all 0.3s ease 0s;
+}
+i:hover{
+    transform: scale(1.1);
+    color: #306b34;
+}
