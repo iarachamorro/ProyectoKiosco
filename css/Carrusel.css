@@ -51,7 +51,7 @@
   background: #fff;
   padding: 5px;
   border-radius: 5px;
-  color: #ff7d7d;
+  color: #306b34;
   right: 10px;
   top: 10px;
   text-transform: capitalize;
@@ -67,7 +67,7 @@
   text-transform: capitalize;
   border: none;
   outline: none;
-  background: #fff;
+  background: #ffffff;
   border-radius: 5px;
   transition: 0.5s;
   cursor: pointer;
@@ -79,8 +79,8 @@
 }
 
 .card-btn:hover {
-  background: #ff7d7d;
-  color: #fff;
+  background: #306b34;
+  color: #fcf9ed;
 }
 
 .product-info {
