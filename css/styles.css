@@ -41,9 +41,7 @@ i{
 
 
 }
-.filtro:hover{
-    color: #fcf9ed;
-}
+
 input{
     border-radius: 30px;
     border: none;
@@ -104,3 +102,5 @@ input{
 .dropdown.toggle ::after{
     display: none;
 }
+*/
+
