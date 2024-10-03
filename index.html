@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/Carrusel.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,15 +18,30 @@
   <body>
 
     <header class="header">
-
+       <!-- 
+      <div class="desplegable">
+            <label  for=""> <i class="fas fa-bars filtro"></i></label>
+          <div class="link">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+          </div>
+        
+        </div>
+        dropdown-toggle
+        
+        --> 
         <div class="dropdown">
           <button style="background: #397f3e;" class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             <label  for=""> <i class="fas fa-bars filtro"></i></label>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a style="color: #397f3e;" class="dropdown-item" href="./Productos/bebidas.html">Bebidas</a></li>
-            <li><a style="color: #397f3e;" class="dropdown-item" href="./Productos/golosinas.html">Golosinas</a></li>
-            <li><a style="color: #397f3e;" class="dropdown-item" href="./Productos/snack.html">Snacks</a></li>
+            <li><a style="color: #397f3e;" class="dropdown-item" href="#">Productos</a></li>
+            <li><a style="color: #397f3e;" class="dropdown-item" href="#">Another action</a></li>
+            <li><a style="color: #397f3e;" class="dropdown-item" href="#">Something </a></li>
+            <li><a style="color: #397f3e;" class="dropdown-item" href="#">Something </a></li>
+          
+
           </ul>
         </div>
 
@@ -38,10 +54,14 @@
 
         <div>
           <a href="inicio_sesion2.html" class="btn"><button>Iniciar Sesion</button></a>
-          <a href="carrito.html" class="btn"><button><i class="fa fa-cart-plus carrito" aria-hidden="true"></i>
+          <a href="./carrito.html" class="btn"><button><i class="fa fa-cart-plus carrito" aria-hidden="true"></i>
           </button></a>
         </div>
         
+      
+        
+
+      
     </header>
 
 <!-- carrusel -->
@@ -54,11 +74,11 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag"></span>
-                        <img src="./Productos/imgbebi/aquariusmanz.webp class="product-thumb" alt="">
+                        <img src="./imagenes/MilkaNegro.png" class="product-thumb" alt="">
                         <button class="card-btn">Añadir Al Carrito</button>
                     </div>
                     <div class="product-info">
-                        <h2 class="product-brand"> Aquarius Manzana</h2>
+                        <h2 class="product-brand"> Milka Negro</h2>
                         <p class="product-short-description">Descripcion</p>
                         <span class="price">$20</span><span class="actual-price">$1200</span>
                     </div>
@@ -66,11 +86,11 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag"></span>
-                        <img src="./Productos/imggol/alfamilka.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/oreo.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
-                        <h2 class="product-brand"> Alfajor Milka</h2>
+                        <h2 class="product-brand"> Oreo</h2>
                         <p class="product-short-description">Descripcion</p>
                         <span class="price">$20</span><span class="actual-price">$40</span>
                     </div>
@@ -78,11 +98,11 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag"></span>
-                        <img src="./Productos/imgsnack/laysjamon.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/MilkaTriple.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
-                        <h2 class="product-brand"> Lays Jamon Serrano</h2>
+                        <h2 class="product-brand"> Milka Triple</h2>
                         <p class="product-short-description">Descripcion</p>
                         <span class="price">$20</span><span class="actual-price">$40</span>
                     </div>
@@ -90,11 +110,11 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag"></span>
-                        <img src="./Productos/imggol/alfapepitos.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/pepitos.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
-                        <h2 class="product-brand"> Alfajor Pepitos</h2>
+                        <h2 class="product-brand"> Pepitos</h2>
                         <p class="product-short-description">Descripcion</p>
                         <span class="price">$20</span><span class="actual-price">$40</span>
                     </div>
@@ -102,11 +122,11 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag"></span>
-                        <img src="./Productos/imggol/barrakitkat.png" class="product-thumb" alt="">
+                        <img src="./imagenes/aquaman.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
-                        <h2 class="product-brand">KitKat</h2>
+                        <h2 class="product-brand">Aquarius Manzana</h2>
                         <p class="product-short-description">Descripcion</p>
                         <span class="price">$20</span><span class="actual-price">$40</span>
                     </div>
@@ -114,23 +134,23 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag"></span>
-                        <img src="./Productos/imggol/gallesoreo.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/kitkat.webp" class="product-thumb" alt="">
+                        <button class="card-btn">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-brand">Chocolate Kitkat</h2>
+                        <p class="product-short-description">Descripcion</p>
+                        <span class="price">$20</span><span class="actual-price">$40</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-tag"></span>
+                        <img src="./imagenes/MiniOreo.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
                         <h2 class="product-brand">Galletitas Oreo</h2>
-                        <p class="product-short-description">Descripcion</p>
-                        <span class="price">$20</span><span class="actual-price">$40</span>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <span class="discount-tag"></span>
-                        <img src="./Productos/imggol/galleterrabusi.webp" class="product-thumb" alt="">
-                        <button class="card-btn">Añadir al carrito</button>
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-brand">Galletitas Terrabusi</h2>
                         <p class="product-short-description">Descripcion</p>
                         <span class="price">$20</span><span class="actual-price">$40</span>
                     </div>
@@ -183,11 +203,11 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag">50% off</span>
-                        <img src="./imagenes/alfamilka.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/MiniOreo.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir Al Carrito</button>
                     </div>
                     <div class="product-info">
-                        <h2 class="product-brand"> Milka Negro</h2>
+                        <h2 class="product-brand"> Mini Oreo</h2>
                         <p class="product-short-description">Descripcion</p>
                         <span class="price">$20</span><span class="actual-price">$1200</span>
                     </div>
@@ -195,7 +215,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag">50% off</span>
-                        <img src="./imagenes/alfaoreo.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/oreo.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
@@ -207,7 +227,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag">50% off</span>
-                        <img src="./imagenes/alfaoreomilka.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/MilkaTriple.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
@@ -219,7 +239,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag">50% off</span>
-                        <img src="./imagenes/alfapepitos.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/pepitos.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
@@ -231,7 +251,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag">50% off</span>
-                        <img src="./imagenes/aquariusmanz.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/aquaman.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
@@ -243,7 +263,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag">50% off</span>
-                        <img src="./imagenes/barrakitkat.png" class="product-thumb" alt="">
+                        <img src="./imagenes/kitkat.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
@@ -255,7 +275,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag">50% off</span>
-                        <img src="./imagenes/gallesoreo.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/oreo.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
@@ -267,7 +287,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag">50% off</span>
-                        <img src="./imagenes/galleterrabusi.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/terrabusi.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
@@ -279,7 +299,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag">50% off</span>
-                        <img src="./imagenes/laysjamon.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/Lays.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
@@ -291,7 +311,7 @@
                 <div class="product-card">
                     <div class="product-image">
                         <span class="discount-tag">50% off</span>
-                        <img src="./imagenes/minirhodesia.webp" class="product-thumb" alt="">
+                        <img src="./imagenes/Rhodesia.webp" class="product-thumb" alt="">
                         <button class="card-btn">Añadir al carrito</button>
                     </div>
                     <div class="product-info">
