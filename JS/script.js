@@ -3,6 +3,12 @@ const productContainers = [...document.querySelectorAll('.product-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
 
+var todos_productos= Array ()
+var lista_galletitas = Array();
+var lista_bebidas = Array ();
+var lista_snacks = Array ();
+
+
 productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
     let containerWidth = containerDimensions.width;
@@ -39,3 +45,42 @@ let total = 0;
                 totalElement.textContent = `Total: $${total.toFixed(2)}`;
             });
         });
+
+    
+
+        window.addEventListener("load", function () {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+               // Typical action to be performed when the document is ready:
+                console.log(xhttp.responseText)
+                let productos = JSON.parse (xhttp.responseText)
+                productos.forEach(p => {
+                    console.log (p)
+                    if (p["categoria"] == "galletitas"){
+                        lista_galletitas.push (p)
+                        console.log (lista_galletitas)
+                    }
+                    if (p["categoria"] == "bebidas"){
+                        lista_bebidas.push (p)
+                        console.log (lista_bebidas)
+                    }
+                    if (p["categoria"] == "snacks"){
+                        lista_snacks.push (p)
+                        console.log (lista_snacks)
+                    }
+                });
+                localStorage.setItem("bebidas", JSON.stringify(lista_bebidas))
+            }
+        };
+        xhttp.open("GET", "https://roque1234.pythonanywhere.com/traer_productos", true);
+        xhttp.send();
+        })
+
+
+
+
+
+
+
+
