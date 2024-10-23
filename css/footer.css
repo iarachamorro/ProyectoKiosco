@@ -89,8 +89,8 @@ ul {
   margin-bottom: 40px;
   position: relative;
   }
-  .footer-widget-heading h3::before {306b34
-  content: "";
+  .footer-widget-heading h3::before {
+  content: "306b34";
   position: absolute;
   left: 0;
   bottom: -15px;
@@ -105,7 +105,7 @@ ul {
   margin-bottom: 12px;
   }
   .footer-widget ul li a:hover{
-  color: #d6ecd4º;
+  color: #d6ecd4;
   }
   .footer-widget ul li a {
   color: #FCF9ED;306b34
