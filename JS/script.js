@@ -7,7 +7,7 @@ var todos_productos= Array ()
 var lista_golosinas = Array();
 var lista_bebidas = Array ();
 var lista_snacks = Array ();
-
+var lista_galletitas = Array ();
 
 productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
@@ -69,10 +69,15 @@ let total = 0;
                         lista_snacks.push (p)
                         console.log (lista_snacks)
                     }
+                    if (p["categoria"] == "galletitas"){
+                        lista_galletitas.push (p)
+                        console.log (lista_galletitas)
+                    }
                 });
                 localStorage.setItem("bebidas", JSON.stringify(lista_bebidas))
                 localStorage.setItem("snacks", JSON.stringify(lista_snacks))
                 localStorage.setItem("golosinas", JSON.stringify(lista_golosinas))
+                localStorage.setItem("galletitas", JSON.stringify(lista_galletitas))
             }
         };
         xhttp.open("GET", "https://roque1234.pythonanywhere.com/traer_productos", true);
