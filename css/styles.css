@@ -15,15 +15,21 @@
 
 i{
     cursor: pointer;
-    color: #fcf9ed;
-    
+    color: #397f3e;
 
+    
 }
+
 .filtro{
     font-size: 35px;
     align-items: center;
     color: #fcf9ed;
     padding: 10px;
+    transition: all 0.3s ease 0s;
+
+}
+.filtro:hover{
+    transform: scale(1.1);
 
 
 }
@@ -49,15 +55,21 @@ input{
     height: 35px;  
 }
 .boton{
-    background-color: #306b34;
+    background-color: #fcf9ed;
     cursor: pointer;
     width: 35px;
     height: 35px;
     border-radius: 30px;
     border: none;
+    transition: all 0.3s ease 0s;
+    padding: 2px;
+    
+}
+.boton:hover{
+   
+    transform: scale(1.1);
 
 }
-
 .header .btn button{
     font-weight: 700;
     margin-left: 20px;
@@ -69,7 +81,6 @@ input{
     cursor: pointer;
     transition: all 0.3s ease 0s;
     
-   
 }
 
 .header .btn button:hover{
@@ -78,23 +89,18 @@ input{
     transform: scale(1.1);
 }
 
-.link a{
-    text-decoration: none;
-    color: #397f3e;
+
+
+
+/*se despliega menu al pasar el mouse*/
+.dropdown:hover .dropdown-menu {
     display: block;
-    padding: 5px;
+    margin-top: 0;
+    background:#fcf9ed;
+    
+    
 }
-.link{
-    background-color: #fcf9ed;
-    width: 180px;
+/*
+.dropdown.toggle ::after{
     display: none;
-}
-.link a:hover{
-    background-color: #397f3e;
-    color: #fcf9ed  ;
-}
-.desplegable:hover .link{
-    margin-top: 150px;
-    display: block;
-    align-self: flex-end;
 }

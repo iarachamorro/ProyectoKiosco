@@ -6,8 +6,10 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
+    display: flex;
+    justify-content: space-between;
+    background-color: #397f3e;
+    color: #fcf9ed;
     padding: 10px;
     text-align: center;
 }
@@ -40,8 +42,9 @@ main {
 }
 
 .product button {
-    background-color: #28a745;
-    color: white;
+    font-weight: 600;
+    background-color: #397f3e;
+    color: #fcf9ed;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -61,6 +64,7 @@ main {
     border-bottom: 1px solid #ddd;
     padding: 5px 0;
 }
+<<<<<<< HEAD
 
 .btn button{
     font-weight: 700;
@@ -68,10 +72,20 @@ main {
     color: #397f3e;
     padding: 9px 25px;
     background: #ffffff;
+=======
+.boton{
+    font-weight: 700;
+    margin-left: 50px;
+    margin-right: 90%;
+    color: #397f3e;
+    padding: 9px 25px;
+    background: #fcf9ed;
+>>>>>>> master
     border: none;
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+<<<<<<< HEAD
     
    
 }
@@ -81,3 +95,19 @@ main {
     color: #306b34;
     transform: scale(1.1);
 }
+=======
+
+}.boton:hover{
+    background: #fcf9ed;
+    color: #306b34;
+}
+i{
+    cursor: pointer;
+    color: #397f3e;
+    transition: all 0.3s ease 0s;
+}
+i:hover{
+    transform: scale(1.1);
+    color: #306b34;
+}
+>>>>>>> master
