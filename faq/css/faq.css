@@ -36,6 +36,10 @@ header {
     text-align: center;
 	height: 70px;
 }
+li{
+	list-style: none;
+}
+
 .boton{
     background-color: #fcf9ed;
     cursor: pointer;
