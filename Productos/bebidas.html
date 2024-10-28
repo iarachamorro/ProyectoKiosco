@@ -21,7 +21,7 @@
               <li><a style="color: #397f3e;" class="dropdown-item" href="/Productos/bebidas.html">Bebidas</a></li>
               <li><a style="color: #397f3e;" class="dropdown-item" href="/Productos/golosinas.html">Golosinas</a></li>
               <li><a style="color: #397f3e;" class="dropdown-item" href="/Productos/snack.html">Snacks</a></li>
-              <li><a style="color: #397f3e;" class="dropdown-item" href="/Productos/galletitas.html">galletitas</a></li>
+              <li><a style="color: #397f3e;" class="dropdown-item" href="/Productos/galletitas.html">Galletitas</a></li>
             </ul>
           </div>
   
@@ -42,82 +42,7 @@
            
         </section>
     </main>
-    <script>        
-        const searchInput = document.getElementById('searchInput');
-        const suggestionsDiv = document.getElementById('suggestions');
-        const content = document.getElementById('content');
-        //const paragraphs = Array.from(content.getElementsByTagName('p'));
-
-        // Lista de términos de ejemplo para sugerencias
-        const suggestions = [
-            "HTML", "JavaScript", "CSS", "programación", "sitios web", "buscador", "sugerencias"
-        ];
-
-        // Mostrar sugerencias
-        function showSuggestions() {
-            const input = searchInput.value.toLowerCase();
-            suggestionsDiv.innerHTML = '';
-
-            if (input === '') {
-                suggestionsDiv.classList.add('hidden');
-                return;
-            }
-
-            const filteredSuggestions = suggestions.filter(suggestion =>
-                suggestion.toLowerCase().includes(input)
-            );
-
-            if (filteredSuggestions.length > 0) {
-                suggestionsDiv.classList.remove('hidden');
-                filteredSuggestions.forEach(suggestion => {
-                    const div = document.createElement('div');
-                    div.classList.add('suggestion-item');
-                    div.innerHTML = highlightMatch(suggestion, input);
-                    div.onclick = function() {
-                        searchInput.value = suggestion;
-                        search();
-                        suggestionsDiv.classList.add('hidden');
-                    };
-                    suggestionsDiv.appendChild(div);
-                });
-            } else {
-                suggestionsDiv.classList.add('hidden');
-            }
-        }
-
-        // Resaltar coincidencias
-        function highlightMatch(text, query) {
-            const index = text.toLowerCase().indexOf(query.toLowerCase());
-            if (index !== -1) {
-                return text.substring(0, index) +
-                       "<span class='highlight'>" + text.substring(index, index + query.length) + "</span>" +
-                       text.substring(index + query.length);
-            }
-            return text;
-        }
-
-        // Buscar en el contenido
-        function search() {
-            const input = searchInput.value.toLowerCase();
-            paragraphs.forEach(paragraph => {
-                const text = paragraph.textContent.toLowerCase();
-                if (text.includes(input)) {
-                    const originalText = paragraph.textContent;
-                    const highlightedText = highlightMatch(originalText, input);
-                    paragraph.innerHTML = highlightedText;
-                } else {
-                    paragraph.innerHTML = paragraph.textContent;
-                }
-            });
-        }
-
-        // Limpiar el resaltado y las sugerencias al hacer clic fuera del área de sugerencias
-        document.addEventListener('click', function(event) {
-            if (!document.getElementById('searchContainer').contains(event.target)) {
-                suggestionsDiv.classList.add('hidden');
-            }
-        });
-        </script>
+ 
         <!--
          // Función para agregar producto al localStorage
          function addProductToCart(event) {
