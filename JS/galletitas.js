@@ -15,8 +15,8 @@ function cargargalletitas() {
         
         li.innerHTML='<img style="width:70px; height=70px"  src="' + b["imagen"] + '"/>' +
                 '<h3>'+ b["nombre"] + '</h3>' +
-                '<p>' + b["precio"] +'</p>' +
-                '<button class="add-to-cart">Agregar al Carrito</button>'
+                '<p> $' + b["precio"] +'</p>' +
+                '<button class="boton_carrito">Agregar al Carrito</button>'
 
         
 

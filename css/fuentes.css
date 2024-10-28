@@ -1,0 +1,28 @@
+.contenedor {
+    display: flex; /* Usar flexbox para las columnas */
+    justify-content: space-between; /* Espacio entre columnas */
+    padding: 20px; /* Espaciado interno */
+}
+
+.columna {
+    flex: 1; /* Cada columna ocupa el mismo espacio */
+    margin: 0 50px; /* Espaciado entre columnas */
+}
+
+.boton_carrito {
+    font-weight: 700;
+    color: #fcf9ed;
+    padding: 9px 25px;
+    background: #218838;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;    
+
+}
+
+.boton_carrito:hover {
+    background: #fcf9ed; /* Cambio de fondo al pasar el ratón */
+    color: #2a5b2b; /* Cambio de color de texto */
+    transform: translateY(-2px); /* Efecto de elevación */
+}

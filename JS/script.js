@@ -9,6 +9,7 @@ var lista_bebidas = Array ();
 var lista_snacks = Array ();
 var lista_galletitas = Array ();
 
+
 productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
     let containerWidth = containerDimensions.width;
@@ -83,8 +84,6 @@ let total = 0;
         xhttp.open("GET", "https://roque1234.pythonanywhere.com/traer_productos", true);
         xhttp.send();
         })
-
-
 
 
 
