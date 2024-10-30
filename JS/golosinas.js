@@ -15,32 +15,34 @@ function cargargolosinas() {
     // Crea un nuevo elemento <li>
     const li = document.createElement("div");
 
-    li.innerHTML = `
-    <img style="width:70px; height:70px;" src="${b["imagen"]}" />
-    <h3>${b["nombre"]}</h3>
-    <p>$ ${b["precio"]}</p>
-    <button class="boton_carrito" onclick="Agregar_productos_carrito('${b["id"]}', '${b["nombre"]}', '${b["precio"]}')">Agregar al Carrito</button>
-`;
+    li.innerHTML= '<div class="carta">'+
+    '<img style="width:100px; height=90px;"  src="' + b["imagen"] + '"/>' +
+    '<h3>'+ b["nombre"] + '</h3>' +
+    '<p> $'  + b["precio"] +'</p>' +
+    '<button class="boton_carrito">Agregar al Carrito</button>'
+    '</div>'
 
 
-    lista.appendChild(li);
-  });
+lista.appendChild(li);
+
+
+})
 }
 
-function Agregar_productos_carrito(id, nombre, precio) {
-  console.log(`Producto agregado: ID - ${id}, Nombre - ${nombre}`);
-  console.log(precio)
+//function Agregar_productos_carrito(id, nombre, precio) {
+  //console.log(`Producto agregado: ID - ${id}, Nombre - ${nombre}`);
+  //console.log(precio)
   // Aquí puedes agregar la lógica para añadir el producto al carrito
- let producto ={
-    "nombre": nombre,
-    "id_producto": id,
-    "precio": precio
- }
+ //let producto ={
+    //"nombre": nombre,
+    //"id_producto": id,
+    //"precio": precio
+ //}
 
- carrito.push(producto)
+ //carrito.push(producto)
 
- console.log(carrito)
+ //console.log(carrito)
 
 
 
-}
+//}
