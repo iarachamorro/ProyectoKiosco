@@ -17,7 +17,8 @@
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    transition: all 0.3s ease;    
+    transition: all 0.3s ease; 
+    margin-top: 5%;   
 
 }
 
@@ -25,4 +26,11 @@
     background: #fcf9ed; /* Cambio de fondo al pasar el ratón */
     color: #2a5b2b; /* Cambio de color de texto */
     transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.carta {
+    box-shadow: 2px 2px 10px #3d3c3c;
+    height: 102%;
+    padding: 4%;
+    border-radius: 20px;
 }

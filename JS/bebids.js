@@ -13,11 +13,12 @@ function cargarBebidas() {
         // Crea un nuevo elemento <li>
         const li = document.createElement('div');
         
-        li.innerHTML='<img style="width:100px; height=90px;"  src="' + b["imagen"] + '"/>' +
+        li.innerHTML= '<div class="carta">'+
+                '<img style="width:100px; height=90px;"  src="' + b["imagen"] + '"/>' +
                 '<h3>'+ b["nombre"] + '</h3>' +
                 '<p> $'  + b["precio"] +'</p>' +
                 '<button class="boton_carrito">Agregar al Carrito</button>'
-
+                '</div>'
         
 
         lista.appendChild(li);
