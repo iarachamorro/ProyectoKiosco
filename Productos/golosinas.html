@@ -22,9 +22,8 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li><a style="color: #397f3e;" class="dropdown-item" href="../index.html">Inicio</a></li>
               <li><a style="color: #397f3e;" class="dropdown-item" href="/Productos/bebidas.html">Bebidas</a></li>
-              <li><a style="color: #397f3e;" class="dropdown-item" href="/Productos/golosinas.html">Golosinas</a></li>
               <li><a style="color: #397f3e;" class="dropdown-item" href="/Productos/snack.html">Snacks</a></li>
-              <li><a style="color: #397f3e;" class="dropdown-item" href="/Productos/galletitas.html">galletitas</a></li>
+              <li><a style="color: #397f3e;" class="dropdown-item" href="/Productos/galletitas.html">Galletitas</a></li>
             </ul>
           </div>
   
@@ -44,34 +43,13 @@
            
         </section>
     </main>
-    <script>        
-       
-        </script>
-        <!--
-         // Función para agregar producto al localStorage
-         function addProductToCart(event) {
-             const product = event.target.parentElement;
-             const productName = product.querySelector('h3').textContent;
-             const productPrice = parseFloat(product.getAttribute('data-price'));
-             
-             // Obtener los productos actuales del localStorage
-             let cart = JSON.parse(localStorage.getItem('cart')) || [];
-             
-             // Agregar el nuevo producto al carrito
-             cart.push({ name: productName, price: productPrice });
-             
-             // Guardar el carrito actualizado en el localStorage
-             localStorage.setItem('cart', JSON.stringify(cart));
-             
-             // Informar al usuario
-             alert(`${productName} ha sido agregado al carrito`);
-         }
- 
-         // Agregar eventos a los botones de agregar
-         document.querySelectorAll('.add-to-cart').forEach(button => {
-             button.addEventListener('click', addProductToCart);
-         }); 
-         ¡-->
         <script src="../JS/golosinas.js"></script>
+        <script>
+          
+
+
+
+          
+        </script>
 </body>
 </html>

@@ -102,3 +102,19 @@ i:hover{
     transition: all 0.3s ease 0s;    
 
 }
+/* CSS en carrito.css */
+.btn-custom {
+    background-color: #397f3e;
+    border: none;
+    border-radius: 20px;
+    color: #fcf9ed;
+    height: 30px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #2a5b2b;
+}
+
