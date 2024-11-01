@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     height: 85px;
+
 }
 
 i{
@@ -19,6 +20,9 @@ i{
 
     
 }
+
+
+
 
 .filtro{
     font-size: 35px;
@@ -41,9 +45,7 @@ i{
 
 
 }
-.filtro:hover{
-    color: #fcf9ed;
-}
+
 input{
     border-radius: 30px;
     border: none;
@@ -111,3 +113,5 @@ input{
 .dropdown.toggle ::after{
     display: none;
 }
+*/
+
