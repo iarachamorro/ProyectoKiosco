@@ -11,7 +11,6 @@
     justify-content: space-between;
     align-items: center;
     height: 85px;
-
 }
 
 i{
@@ -20,9 +19,6 @@ i{
 
     
 }
-
-
-
 
 .filtro{
     font-size: 35px;
@@ -38,14 +34,16 @@ i{
 
 }
 .carrito {
-    font-size: 30px;
+    font-size: 20px;
     align-items: center;
-    color: #fcf9ed;
+    color: #397f3e;
     padding: 10px;
 
 
 }
-
+.filtro:hover{
+    color: #fcf9ed;
+}
 input{
     border-radius: 30px;
     border: none;
@@ -61,7 +59,7 @@ input{
     cursor: pointer;
     width: 35px;
     height: 35px;
-    border-radius: 100px;
+    border-radius: 30px;
     border: none;
     transition: all 0.3s ease 0s;
     padding: 2px;
@@ -73,12 +71,17 @@ input{
 
 }
 .botonc{
-   text-align: center;
-    padding: 9px 20px;
-    background: #397f3e;
-    border: none;
-    cursor: pointer;
+     background: #fcf9ed;
+     border: none;
+     border-radius: 30px;
+     width: 50px;
+     height: 50px;
+     transition: all 0.3s ease 0s;
 }
+.botonc:hover{
+    transform: scale(1.1);
+}
+
 .header .btn button{
     font-weight: 700;
     margin-left: 20px;
