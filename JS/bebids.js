@@ -9,7 +9,7 @@ function cargarBebidas() {
     let lista_bebidas = JSON.parse(localStorage.getItem("bebidas"))
     console.log(lista_bebidas)
 
-      lista_bebidas.forEach(b => {
+    lista_bebidas.forEach(b => {
         // Crea un nuevo elemento <li>
         const li = document.createElement('div');
         
