@@ -1,6 +1,9 @@
+var carrito = Array();
+
 window.addEventListener("load", function(){
     cargargalletitas()
 })
+
 function cargargalletitas() {
     
     // Selecciona el contenedor de la lista
@@ -17,13 +20,27 @@ function cargargalletitas() {
         '<img style="width:100px; height=90px;"  src="' + b["imagen"] + '"/>' +
         '<h3>'+ b["nombre"] + '</h3>' +
         '<p> $'  + b["precio"] +'</p>' +
-        '<button class="boton_carrito">Agregar al Carrito</button>'
+        '<button class="boton_carrito" onclick="agregar_carrito(\'' + b["nombre"] + '\', ' + b["precio"] + ')">Agregar al Carrito</button>'
         '</div>'
 
 
 lista.appendChild(li);
-
-
 })
 
+}
+
+function agregar_carrito(nombre, precio){
+  //console.log(nombre, precio)
+
+  let datos = {
+    "nombre": nombre,
+    "precio": precio
+  }
+
+  carrito.push(datos);
+  console.log(carrito);
+}
+
+function finalizar_carrito_g(){
+  localStorage.setItem("carrito", JSON.stringify(carrito))
 }

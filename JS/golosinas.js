@@ -19,7 +19,7 @@ function cargargolosinas() {
     '<img style="width:100px; height=90px;"  src="' + b["imagen"] + '"/>' +
     '<h3>'+ b["nombre"] + '</h3>' +
     '<p> $'  + b["precio"] +'</p>' +
-    '<button class="boton_carrito">Agregar al Carrito</button>'
+    '<button class="boton_carrito" onclick="agregar_carrito(\'' + b["nombre"] + '\', ' + b["precio"] + ')">Agregar al Carrito</button>'
     '</div>'
 
 
@@ -29,20 +29,18 @@ lista.appendChild(li);
 })
 }
 
-//function Agregar_productos_carrito(id, nombre, precio) {
-  //console.log(`Producto agregado: ID - ${id}, Nombre - ${nombre}`);
-  //console.log(precio)
-  // Aquí puedes agregar la lógica para añadir el producto al carrito
- //let producto ={
-    //"nombre": nombre,
-    //"id_producto": id,
-    //"precio": precio
- //}
+function agregar_carrito(nombre, precio){
+  //console.log(nombre, precio)
 
- //carrito.push(producto)
+  let datos = {
+    "nombre": nombre,
+    "precio": precio
+  }
 
- //console.log(carrito)
+  carrito.push(datos);
+  console.log(carrito);
+}
 
-
-
-//}
+function finalizar_carrito_g(){
+  localStorage.setItem("carrito", JSON.stringify(carrito))
+}
