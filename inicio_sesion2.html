@@ -1,32 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<title>Inicio Sesion</title>
+	<title>Inicio de Sesión</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/inicio_sesion2.css">
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-
+	<script src="./JS/inicio.js"></script>
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
+			<!-- Formulario de Inicio de Sesión -->
 			<div class="signup">
-				<form>
+				<form id="loginForm">
 					<label for="chk" aria-hidden="true">Iniciar Sesión</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Contraseña" required="">
-					<button>Iniciar</button>
+					<input type="email" name="email" id="email" placeholder="Email" required="">
+					<input type="password" name="clave" id="clave" placeholder="Contraseña" required="">
+					<button type="button" onclick="inicio()">Iniciar</button>
 				</form>
 			</div>
+
+			<!-- Formulario para Crear Cuenta -->
 			<div class="login">
-				<form>
+				<form id="registerForm">
 					<label for="chk" aria-hidden="true">Crear Cuenta</label>
-					<input  class="barraf" type="text" name="txt" placeholder="Nombre de Usuario" required="">
-					<input class="barraf" type="email" name="email" placeholder="Email" required="">
-					<input class="barraf" type="password" name="pswd" placeholder="Contraseña" required="">
-					<button class="boton">Crear</button>
+					<input class="barraf" type="text" name="nombre" id="nombre" placeholder="Nombre de Usuario" required="">
+					<input class="barraf" type="email" name="email" id="correo" placeholder="Email" required="">
+					<input class="barraf" type="password" name="clave" id="contraseña" placeholder="Contraseña" required="">
+					<button type="button" onclick="crear_cuenta()" class="boton">Crear</button>
 				</form>
 			</div>
 	</div>
+
+	<script>
+		// Función para manejar el envío del formulario de inicio de sesión
+		document.getElementById("loginForm").addEventListener("submit", function(event) {
+			event.preventDefault();  // Prevenir que el formulario se envíe de forma tradicional
+
+			// Obtener los valores de los campos
+			const email = document.getElementById("email").value;
+			const clave = document.getElementById("clave").value;
+
+			// Hacer la solicitud POST al backend (API Flask)
+			fetch("/login", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify({
+					email: email,
+					clave: clave
+				})
+			})
+			.then(response => response.json())
+			.then(data => {
+				if (data.resultado) {
+					alert("¡Bienvenido!");
+					// Redirigir a otra página o hacer algo con la respuesta
+					window.location.href = "/dashboard";  // Puedes redirigir a otra página
+				} else {
+					alert("Usuario no encontrado");
+				}
+			})
+			.catch(error => {
+				console.error("Error:", error);
+				alert("Hubo un problema con la autenticación.");
+			});
+		});
+
+		// Puedes agregar eventos similares para el formulario de registro
+		document.getElementById("registerForm").addEventListener("submit", function(event) {
+			event.preventDefault();
+			// Aquí puedes enviar los datos del formulario de registro de forma similar
+		});
+	</script>
+
 </body>
 </html>
