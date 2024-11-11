@@ -19,9 +19,9 @@ xhttp.send(JSON.stringify(datos));
 
 function crear_cuenta(){
     let datos = {
-        "usuario": document.getElementById("nombre").value,
-        "mail": document.getElementById("correo").value,
-        "clave": document.getElementById("contraseña").value
+        "nombre": document.getElementById("nombre").value,
+        "correo": document.getElementById("correo").value,
+        "clave": document.getElementById("clave").value
 
     }
 var xhttp = new XMLHttpRequest();
