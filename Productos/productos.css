@@ -97,12 +97,12 @@ i{
 
 
 }
-.header .btn button{
+.btn{
     font-weight: 700;
     margin-left: 20px;
     color: #397f3e;
     padding: 9px 25px;
-    background: #fcf9ed;
+    background: #397f3e;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -110,7 +110,7 @@ i{
     
 }
 
-.header .btn button:hover{
+.btn:hover{
     background: #fcf9ed;
     color: #306b34;
     transform: scale(1.1);
