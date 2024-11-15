@@ -26,10 +26,43 @@
             </ul>
             <p id="total">Total: $0.00</p>
             <button id="clear-cart">Vaciar Carrito</button>
+            <section class="product-container" id="miLista">
+           
+        </section>
         </section>
     </main>
 
     <script>
+         carrito: Array();
+        window.addEventListener("load", ()=>{
+            console.log("carrito")
+           
+
+            carrito = localStorage.getItem("carrito");
+            console.log(carrito);
+
+            const lista = document.getElementById('miLista');
+            let lista_bebidas = JSON.parse(localStorage.getItem("carrito"))
+    console.log(lista_bebidas)
+
+    lista_bebidas.forEach(b => {
+        // Crea un nuevo elemento <li>
+            console.log(b)
+        const li = document.createElement('div');
+        
+        li.innerHTML= '<div class="carta">'+
+                '<p>'  + b["nombre"] +'</p>'+
+                '<p> $'  + b["precio"] +'</p>' +
+                '</div>'
+                '<button class="boton_carrito" onclick="agregar_carrito(\'' + b["nombre"] + '\', ' + b["precio"] + ')">Agregar al Carrito</button>'
+                '</div>'
+        lista.appendChild(li);
+
+    
+    })
+
+        })
+
         // Función para cargar los productos desde el localStorage
         function loadCart() {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
