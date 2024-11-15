@@ -16,8 +16,10 @@ function cargarBebidas() {
         
         li.innerHTML= '<div class="carta">'+
                 '<img style="width:100px; height=90px;"  src="' + b["imagen"] + '"/>' +
+
                 '<h3>'+ b["nombre"] + '</h3>' +
                 '<p> $'  + b["precio"] +'</p>' +
+                '<div>'
                 '<button class="boton_carrito" onclick="agregar_carrito(\'' + b["nombre"] + '\', ' + b["precio"] + ')">Agregar al Carrito</button>'
                 '</div>'
         

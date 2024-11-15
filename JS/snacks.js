@@ -30,17 +30,22 @@ lista.appendChild(li);
 
 }
 function agregar_carrito(nombre, precio){
-    //console.log(nombre, precio)
-  
-    let datos = {
-      "nombre": nombre,
-      "precio": precio
-    }
-  
-    carrito.push(datos);
-    console.log(carrito);
+  //console.log(nombre, precio)
+
+  let datos = {
+    "nombre": nombre,
+    "precio": precio
   }
-  
-  function finalizar_carrito_s(){
-    localStorage.setItem("carrito", JSON.stringify(carrito))
+
+  carrito.push(datos);
+  console.log(carrito);
+    // Vaciar el carrito
+    function vaciar_carrito () {
+      localStorage.removeItem('miLista');
+      loadCart(); // Recargar el carrito vacío
   }
+}
+
+function finalizar_carrito_s(){
+  localStorage.setItem("carrito", JSON.stringify(carrito))
+}

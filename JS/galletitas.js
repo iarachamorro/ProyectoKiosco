@@ -39,6 +39,11 @@ function agregar_carrito(nombre, precio){
 
   carrito.push(datos);
   console.log(carrito);
+    // Vaciar el carrito
+    function vaciar_carrito () {
+      localStorage.removeItem('miLista');
+      loadCart(); // Recargar el carrito vacío
+  }
 }
 
 function finalizar_carrito_g(){
