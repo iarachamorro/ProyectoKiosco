@@ -9,6 +9,7 @@ xhttp.onreadystatechange = function() {
        // Typical action to be performed when the document is ready:
        //document.getElementById("demo").innerHTML = xhttp.responseText;
        console.log(xhttp.responseText)
+       location.href="./index.html"
     }
 };
 
@@ -21,7 +22,9 @@ function crear_cuenta(){
     let datos = {
         "nombre": document.getElementById("nombre").value,
         "correo": document.getElementById("correo").value,
-        "clave": document.getElementById("clave").value
+        "clave": document.getElementById("contraseña").value,
+        "legajo": document.getElementById("legajo").value
+        
 
     }
 var xhttp = new XMLHttpRequest();
@@ -33,7 +36,7 @@ xhttp.onreadystatechange = function() {
     }
 };
 
-xhttp.open("POST", "http://roque1234.pythonanywhere.com/login", true);
+xhttp.open("POST", "http://roque1234.pythonanywhere.com/crear_cuenta", true);
 xhttp.setRequestHeader("Content-Type", "application/json")
 xhttp.send(JSON.stringify(datos));
 }
