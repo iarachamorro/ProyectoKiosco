@@ -8,8 +8,9 @@ var lista_golosinas = Array();
 var lista_bebidas = Array ();
 var lista_snacks = Array ();
 var lista_galletitas = Array ();
+var lista_general = Array();
 
-
+/*
 productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
     let containerWidth = containerDimensions.width;
@@ -22,6 +23,7 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+    */
 
 // Carrito
 
@@ -47,14 +49,38 @@ let total = 0;
             });
         });
 
+        function cargar_lista_general() {
+            objBebidas =  JSON.parse(localStorage.getItem("bebidas"))
+            objSnacks = JSON.parse(localStorage.getItem("snacks"))
+            objGolosinas =  JSON.parse(localStorage.getItem("golosinas"))
+            objGalletitas =  JSON.parse(localStorage.getItem("galletitas"))
+
+            console.log(objBebidas.length)
+            console.log(objSnacks.length)
+            console.log(objGolosinas.length)
+            console.log(objGalletitas.length)
+
+            list_general_convertir(objBebidas)
+            list_general_convertir(objSnacks)
+            list_general_convertir(objGolosinas)
+            list_general_convertir(objGalletitas)
+
+            console.log("lista general: ", lista_general)
+
+            
+
+        }
+
     
+        document.addEventListener("DOMContentLoaded", cargar_lista_general);
 
         window.addEventListener("load", function () {
+            //console.log("index.html", this.localStorage.getItem("bebidas"))
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                // Typical action to be performed when the document is ready:
-                console.log(xhttp.responseText)
+                //console.log(xhttp.responseText)
                 let productos = JSON.parse (xhttp.responseText)
                 productos.forEach(p => {
                     console.log (p)
@@ -80,12 +106,23 @@ let total = 0;
                 localStorage.setItem("golosinas", JSON.stringify(lista_golosinas))
                 localStorage.setItem("galletitas", JSON.stringify(lista_galletitas))
             }
+            
+            
+
         };
         xhttp.open("GET", "https://roque1234.pythonanywhere.com/traer_productos", true);
         xhttp.send();
         })
 
 
+        function list_general_convertir(objListaCategoria) {
+        
+           for (let index = 0; index < objListaCategoria.length; index++) {
+            console.log(index)
+            const element = objListaCategoria[index];
+            lista_general.push(element)
+          }
+        }
 
 
 
