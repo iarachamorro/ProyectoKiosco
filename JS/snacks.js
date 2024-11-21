@@ -3,6 +3,8 @@ var carrito = Array ();
 window.addEventListener("load", function(){
     cargarsnacks()
 })
+
+
 function cargarsnacks() {
     
     // Selecciona el contenedor de la lista
@@ -19,7 +21,7 @@ function cargarsnacks() {
         '<img style="width:100px; height=90px;"  src="' + b["imagen"] + '"/>' +
         '<h3>'+ b["nombre"] + '</h3>' +
         '<p> $'  + b["precio"] +'</p>' +
-        '<button class="boton_carrito" onclick="agregar_carrito(\'' + b["nombre"] + '\', ' + b["precio"] + ')">Agregar al Carrito</button>'
+        '<button class="boton_carrito" onclick="agregar_carrito(\'' + b["nombre"] + '\', ' + b["precio"] + ')">Agregar al Carrito</button>' +
         '</div>'
 
 
@@ -45,7 +47,7 @@ function mostrarResultados(resultados) {
   const listaResultados = document.getElementById('resultadoBusqueda');
   listaResultados.innerHTML = ''; // Limpiar los resultados anteriores
 
-  if (resultados.length > 15) {
+  if (resultados.length > 0) {
       // Si hay resultados, crear elementos <li> para cada uno
       resultados.forEach(snack => {
           const li = document.createElement('li');

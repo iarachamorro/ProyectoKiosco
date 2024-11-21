@@ -1,8 +1,10 @@
-var carrito = Array ();
+var carrito = Array();
+
 window.addEventListener("load", function(){
-    cargarBebidas()
+    cargarbebidas()
 })
-function cargarBebidas() {
+
+function cargarbebidas() {
     
     // Selecciona el contenedor de la lista
     const lista = document.getElementById('miLista');
@@ -10,26 +12,23 @@ function cargarBebidas() {
     let lista_bebidas = JSON.parse(localStorage.getItem("bebidas"))
     console.log(lista_bebidas)
 
-    lista_bebidas.forEach(b => {
+      lista_bebidas.forEach(b => {
         // Crea un nuevo elemento <li>
         const li = document.createElement('div');
         
         li.innerHTML= '<div class="carta">'+
-                '<img style="width:100px; height=90px;"  src="' + b["imagen"] + '"/>' +
+        '<img style="width:100px; height=90px;"  src="' + b["imagen"] + '"/>' +
+        '<h3>'+ b["nombre"] + '</h3>' +
+        '<p> $'  + b["precio"] +'</p>' +
+        '<button class="boton_carrito" onclick="agregar_carrito(\'' + b["nombre"] + '\', ' + b["precio"] + ')">Agregar al Carrito</button>'
+        '</div>'
 
-                '<h3>'+ b["nombre"] + '</h3>' +
-                '<p> $'  + b["precio"] +'</p>' +
-                '<div>'
-                '<button class="boton_carrito" onclick="agregar_carrito(\'' + b["nombre"] + '\', ' + b["precio"] + ')">Agregar al Carrito</button>'
-                '</div>'
-        
 
-        lista.appendChild(li);
-
-    
-    })
+lista.appendChild(li);
+})
 
 }
+
 
 
 function agregar_carrito(nombre, precio){
