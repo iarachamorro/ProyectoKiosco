@@ -29,8 +29,11 @@
             <section class="product-container" id="miLista">
            
         </section>
+
         </section>
     </main>
+    <button id="reserve-button" class="boton_carrito" onclick="reservarCarrito()">Reservar</button>
+
 
     <script>
          carrito: Array();
@@ -62,11 +65,15 @@
                 '<p> $'  + b["precio"] +'</p>' +
                 '</div>'
                 '<button class="boton_carrito" onclick="agregar_carrito(\'' + b["nombre"] + '\', ' + b["precio"] + ')">Agregar al Carrito</button>'
+                
                 '</div>'
         lista.appendChild(li);
 
     
     })
+    
+
+
 
         })
     </script>
