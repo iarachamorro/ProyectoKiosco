@@ -10,7 +10,7 @@ var lista_snacks = Array ();
 var lista_galletitas = Array ();
 var lista_general = Array();
 
-/*
+
 productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
     let containerWidth = containerDimensions.width;
@@ -23,7 +23,7 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
-    */
+    
 
 // Carrito
 
