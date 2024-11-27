@@ -93,15 +93,21 @@ i:hover{
     font-weight: 700;
     margin-left: 50px;
     margin-right: 90%;
-    color: #397f3e;
+    color: #fcf9ed;
     padding: 9px 25px;
-    background: #fcf9ed;
+    background: #397f3e;
     border: none;
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease 0s;    
+}
+.boton_carrito:hover{
+    transform: scale(1.1);
+    color: #397f3e;
+    background: #fcf9ed;
 
 }
+
 /* CSS en carrito.css */
 .btn-custom {
     background-color: #397f3e;
@@ -118,3 +124,9 @@ i:hover{
     background-color: #2a5b2b;
 }
 
+.btn_vaciar {
+    border-radius: 30px;
+    background: #397f3e;
+    color: #fcf9ed;
+    border: none;
+}
