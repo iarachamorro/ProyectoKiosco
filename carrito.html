@@ -32,7 +32,7 @@
 
         </section>
     </main>
-    <button id="reserve-button" class="boton_carrito" onclick="reservarCarrito()">Reservar</button>
+    <button id="reserve-button" class="boton_carrito cd-popup-trigger" onclick="mostrarMensaje()">Reservar</button>
 
 
     <script>
@@ -76,6 +76,25 @@
 
 
         })
+    </script>
+
+<div id="miModal" class="modal">
+    <div class="modal-content">
+        <p>Su compra ha sido reservada</p>
+        <button class="close-btn" onclick="cerrarMensaje()">Cerrar</button>
+    </div>
+</div>
+
+    <script>
+        // Función para mostrar la ventana emergente
+        function mostrarMensaje() {
+            document.getElementById("miModal").style.display = "flex";
+        }
+
+        // Función para cerrar la ventana emergente
+        function cerrarMensaje() {
+            document.getElementById("miModal").style.display = "none";
+        }
     </script>
 </body>
 </html>
