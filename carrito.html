@@ -37,7 +37,7 @@
 
     <script>
          carrito: Array();
-
+         suma_total:Number=0;
          function vaciar_carrito () {
     localStorage.removeItem('carrito');
     location.href="./"
@@ -76,6 +76,26 @@
 
 
         })
+        window.addEventListener("load", () => {
+    if (carrito && carrito.length > 0) {
+        console.log("Iniciando carrito: ", carrito);
+        let suma_total = 0;  // Reiniciar suma total
+        carrito = JSON.parse(carrito)
+        for (let index = 0; index < this.carrito.length; index++) {
+            const element = carrito[index];
+                suma_total += element.precio;
+                console.log(suma_total)
+   
+        }
+        let id_sumatotal = document.getElementById("total")
+        id_sumatotal.textContent = suma_total
+        console.log(suma_total)
+        console.log("Total calculado: ", suma_total);
+    } else {
+        console.log("Carrito vacío o no inicializado correctamente.");
+    }
+});
+
     </script>
 
 <div id="miModal" class="modal">
@@ -86,6 +106,10 @@
 </div>
 
     <script>
+
+
+
+
         // Función para mostrar la ventana emergente
         function mostrarMensaje() {
             document.getElementById("miModal").style.display = "flex";
