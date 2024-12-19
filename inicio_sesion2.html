@@ -1,80 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Inicio de Sesión</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="./css/inicio_sesion2.css">
-	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <title>Inicio de Sesión</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/inicio_sesion2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-	<script src="./JS/inicio.js"></script>
-	<div class="main">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
-			<!-- Formulario de Inicio de Sesión -->
-			<div class="signup">
-				<form id="loginForm">
-					<label for="chk" aria-hidden="true">Iniciar Sesión</label>
-					<input type="email" name="email" id="email" placeholder="Email" required="">
-					<input type="password" name="clave" id="clave" placeholder="Contraseña" required="">
-					<button type="button" onclick="inicio()">Iniciar</button>
-				</form>
-			</div>
+    <script src="./JS/inicio.js"></script>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
 
-			<!-- Formulario para Crear Cuenta -->
-			<div class="login">
-				<form id="registerForm">
-					<label for="chk" aria-hidden="true">Crear Cuenta</label>
-					<input class="barraf" type="text" name="nombre" id="nombre" placeholder="Nombre" required="">
-					<input class="barraf" type="email" name="email" id="correo" placeholder="Email" required="">
-					<input class="barraf" type="password" name="clave" id="contraseña" placeholder="Contraseña" required="">
-					<input class="barraf" type="text" name="clave" id="legajo" placeholder="Legajo" required="">
-					<button type="button" onclick="crear_cuenta()" class="boton">Crear</button>
-				</form>
-			</div>
-	</div>
+        <!-- Formulario de Inicio de Sesión -->
+        <div class="signup">
+            <form id="loginForm">
+                <label for="chk" aria-hidden="true">Iniciar Sesión</label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="password" name="clave" id="clave" placeholder="Contraseña" required>
+                <button type="submit">Iniciar</button>
+            </form>
+        </div>
 
-	<script>
-		// Función para manejar el envío del formulario de inicio de sesión
-		document.getElementById("loginForm").addEventListener("submit", function(event) {
-			event.preventDefault();  // Prevenir que el formulario se envíe de forma tradicional
+        <!-- Formulario para Crear Cuenta -->
+        <div class="login">
+            <form id="registerForm">
+                <label for="chk" aria-hidden="true">Crear Cuenta</label>
+                <input class="barraf" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                <input class="barraf" type="email" name="email" id="correo" placeholder="Email" required>
+                <input class="barraf" type="password" name="clave" id="contraseña" placeholder="Contraseña" required>
+                <input class="barraf" type="text" name="legajo" id="legajo" placeholder="Legajo" required>
+                <button type="submit" class="boton">Crear</button>
+            </form>
+        </div>
+    </div>
 
-			// Obtener los valores de los campos
-			const email = document.getElementById("email").value;
-			const clave = document.getElementById("clave").value;
+    <!-- Formulario para Verificar el Código -->
+    <div>
+        <form id="verifyForm" style="display: none;">
+            <input type="text" id="verificationCode" placeholder="Código de verificación" required>
+            <button type="submit">Verificar</button>
+        </form>
+    </div>
 
-			// Hacer la solicitud POST al backend (API Flask)
-			fetch("/login", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json"
-				},
-				body: JSON.stringify({
-					email: email,
-					clave: clave
-				})
-			})
-			.then(response => response.json())
-			.then(data => {
-				if (data.resultado) {
-					alert("¡Bienvenido!");
-					// Redirigir a otra página o hacer algo con la respuesta
-					window.location.href = "/dashboard";  // Puedes redirigir a otra página
-				} else {
-					alert("Usuario no encontrado");
-				}
-			})
-			.catch(error => {
-				console.error("Error:", error);
-				alert("Hubo un problema con la autenticación.");
-			});
-		});
+    <script>
+        // Manejar el formulario de inicio de sesión
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
 
-		// Puedes agregar eventos similares para el formulario de registro
-		document.getElementById("registerForm").addEventListener("submit", function(event) {
-			event.preventDefault();
-			// Aquí puedes enviar los datos del formulario de registro de forma similar
-		});
-	</script>
+            const email = document.getElementById("email").value;
+            const clave = document.getElementById("clave").value;
 
+            fetch("/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, clave })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.resultado) {
+                    alert("¡Bienvenido!");
+                    window.location.href = "/dashboard";
+                } else {
+                    alert("Usuario no encontrado");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Hubo un problema con la autenticación.");
+            });
+        });
+
+        // Manejar el formulario de registro
+        document.getElementById("registerForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("correo").value;
+            const clave = document.getElementById("contraseña").value;
+            const legajo = document.getElementById("legajo").value;
+
+            fetch("/register", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ nombre, email, clave, legajo })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.resultado) {
+                    alert(data.mensaje);
+                    document.getElementById("registerForm").style.display = "none";
+                    document.getElementById("verifyForm").style.display = "block";
+                } else {
+                    alert(data.mensaje);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Hubo un problema al registrar el usuario.");
+            });
+        });
+
+        // Manejar el formulario de verificación
+        document.getElementById("verifyForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById("correo").value; // El mismo email del registro
+            const codigo = document.getElementById("verificationCode").value;
+
+            fetch("/verify", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, codigo })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.resultado) {
+                    alert(data.mensaje);
+                    window.location.href = "/login"; // Redirigir al inicio de sesión
+                } else {
+                    alert(data.mensaje);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Hubo un problema con la verificación.");
+            });
+        });
+    </script>
 </body>
 </html>
